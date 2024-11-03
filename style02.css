@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: Times New Roman, sans-serif;
+    background-color: #FFD966; /* พื้นหลังสีเหลืองอ่อน */
+    color: #00000; /* สีข้อความหลัก */
+    margin: 0;
+    padding: 0;
+}
+ 
+.container {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffff; /* พื้นหลังของ container เป็นสีขาว */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+ 
+.logo {
+    height: 80px;
+    margin-bottom: 20px;
+}
+ 
+h1 {
+    text-align: center;
+    color: #00000; /* สีฟ้าดำสำหรับหัวข้อหลัก */
+}
+ 
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #6495ED; /* สีของ nav */
+    padding: 10px;
+    border-radius: 8px;
+}
+ 
+nav a {
+    color: #ffffff;
+    background-color: #6495ED; 
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+ 
+nav a:hover {
+    background-color: #005bb5; /* เปลี่ยนเป็นฟ้าเข้มเมื่อวางเมาส์ */
+}
+ 
+.content {
+    margin-top: 20px;
+    text-align: center;
+}
+ 
+.content p {
+    margin: 10px 0;
+    color: #0073e6; 
+}
+table {
+    width: 80%; /* ลดความกว้างของตารางเหลือ 80% ของ container */
+    max-width: 600px; /* กำหนดขนาดสูงสุดของตารางให้ไม่เกิน 600px */
+    margin: 20px auto; /* จัดกึ่งกลางตาราง */
+    border-collapse: collapse;
+    background-color: #e1f5fe;
+}
+ 
+table, th, td {
+    border: 1px solid #6495ED;
+    padding: 8px; /* ลด padding ภายในเซลล์ */
+    text-align: center;
+}
+ 
+th, td {
+    font-size: 14px; /* ลดขนาดฟอนต์ในเซลล์ */
+}
+ 
+th {
+    background-color: #6495ED;
+    color: #ffffff;
+}
+ 
+td {
+    background-color: #b3e5fc;
+}
+ 
+button {
+    background-color: #0073e6; /* สีฟ้าอ่อนสำหรับปุ่ม */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+ 
+button:hover {
+    background-color: #005bb5; /* สีปุ่มเข้มขึ้นเมื่อวางเมาส์ */
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+}
+ 
+form input, form button {
+    margin: 5px 0; /* ระยะห่างระหว่าง input และ button */
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #6495ED;
+    width: 80%; /* ปรับขนาดของ input ให้อยู่ที่ 80% ของ form */
+    max-width: 300px; /* กำหนดขนาดสูงสุดของ input */
+}
+ 
+form button {
+    background-color: #6495ED;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+ 
+form button:hover {
+    background-color: #005bb5;
+}
