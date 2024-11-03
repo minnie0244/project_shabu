@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shabu buffrt</title>
+</head>
+<style>
+       /* ตั้งค่าพื้นฐาน */
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+           font-family: Arial, sans-serif;
+       }
+       body {
+           background-color: #f5f5f5;
+           color: #333;
+       }
+       /* ส่วนหัวของเว็บไซต์ */
+       .header {
+           background-color: #fff;
+           padding: 20px;
+           text-align: center;
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+       }
+       .header h1 {
+           font-size: 32px;
+           color: #E74C3C;
+       }
+       .navbar {
+           margin-top: 10px;
+       }
+       .navbar a {
+           margin: 0 15px;
+           text-decoration: none;
+           color: #333;
+       }
+       /* ส่วนแสดงสินค้า */
+       .product-container {
+           display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+           gap: 20px;
+           padding: 20px;
+           max-width: 1200px;
+           margin: auto;
+       }
+       .product-card {
+           background-color: #fff;
+           border-radius: 8px;
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+           text-align: center;
+           padding: 20px;
+           transition: transform 0.3s;
+       }
+       .product-card:hover {
+           transform: translateY(-5px);
+       }
+       .product-card img {
+           max-width: 100%;
+           height: auto;
+           border-radius: 8px;
+           margin-bottom: 15px;
+       }
+       .product-card h3 {
+           font-size: 18px;
+           color: #333;
+           margin-bottom: 10px;
+       }
+       .product-card p {
+           font-size: 16px;
+           color: #888;
+       }
+</style>
+</head>
+<body>
+<!-- ส่วนหัวของเว็บไซต์ -->
+<div class="header">
+<h1>Menu</h1>
+
+<div class="nav-icons">
+  <button class="search-btn">&#128269;</button>
+  <button class="cart">&#128722;<span class="cart-count">0</span></button>
+</div>
+
+<!-- ส่วนแถบ -->
+<style>
+  .nav-icons {
+   display: flex;
+   align-items: center;
+}
+.search-btn, .cart-btn {
+   background: none;
+   border: none;
+   font-size: 18px;
+   cursor: pointer;
+   margin-left: 15px;
+}
+.cart-count {
+   background-color: #ff6600;
+   color: white;
+   border-radius: 50%;
+   padding: 3px 6px;
+   font-size: 12px;
+}
+</style>
+
+
+<!-- ส่วนแสดงสินค้า -->
+<div class="product-container">
+<div class="product-card">
+<img src="sirloin.png" alt="Sirloin">
+<h3>Sirloin</h3>
+
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="gyu-harami.jpg" alt="Gyu-harami">
+<h3>Gyu-harami</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Tendered-beef.jpg" alt="Tendered beef">
+<h3>Tendered beef</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Pork.jpg" alt="Pork">
+<h3>Pork</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Bacon.jpg" alt="Bacon">
+<h3>Bacon</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Pork-liver.jpg" alt="Pork liver">
+<h3>Pork liver</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Tendered-pork.jpg" alt="Tendered pork">
+<h3>Tendered pork</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Pork-black-pepper-sauce.webp" alt="TenPork black pepper sauce">
+<h3>Pork black pepper sauce</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Pork-mala-sauce.webp" alt="Pork mala sauce">
+<h3>Pork mala sauce</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Buta-corm.jpg" alt="Buta corm">
+<h3>Buta corm</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Fresh-shrimp.jpg" alt="Fresh shrimp">
+<h3>Fresh shrimp</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="squid.webp" alt="squid">
+<h3>Squid</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Clam.jpg" alt="Clam">
+<h3>Clam</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Salmon-head.webp" alt="Salmon head">
+<h3>Salmon head</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Pangasius-hypophthalmus.webp" alt="Pangasius hypophthalmus">
+<h3>Pangasius hypophthalmus</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Jellyfish.webp" alt="Jellyfish">
+<h3>Jellyfish</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Pork-ball.png" alt="Pork ball">
+<h3>Pork ball</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Fish-ball.jpg" alt="Fish ball">
+<h3>Fish ball</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Kani-tsume-ball.jpg" alt="Kani tsume ball">
+<h3>Kani tsume ball</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Seaweed-roll.webp" alt="Seaweed roll">
+<h3>Seaweed roll</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Cheese-tofu.jpg" alt="Cheese tofu">
+<h3>Cheese tofu</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Fish-tofu.jpg" alt="Fish tofu">
+<h3>Fish tofu</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Egg-tofu.jpg" alt="Egg tofu">
+<h3>Egg tofu</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Egg.jpg" alt="Egg">
+<h3>Egg</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Vermicelli.jpg" alt="Vermicelli">
+<h3>Vermicelli</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Spinach.jpg" alt="Spinach">
+<h3>Spinach</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Morning-glory.jpg" alt="Morning glory">
+<h3>Morning glory</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Pak-choi.jpg" alt="Pak choi">
+<h3>Pak choi</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Celery.jpg" alt="Celery">
+<h3>Celery</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Chinese-cabbage.jpg" alt="Chinese cabbage">
+<h3>Chinese cabbage</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Cabbage.jpg" alt="Cabbage">
+<h3>Cabbage</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Straw-mushroom.jpg" alt="Straw mushroom">
+<h3>Straw mushroom</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Enoki-mushroom.jpg" alt="Enoki mushroom">
+<h3>Enoki mushroom</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+
+</div>
+<div class="product-card">
+<img src="Sweet-corn.jpg" alt="Sweet corn">
+<h3>Sweet corn</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Pumpkin.jpg" alt="Pumpkin">
+<h3>Pumpkin</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<div class="product-card">
+<img src="Carrot.jpg" alt="Carrot">
+<h3>Carrot</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+
+</div>
+<div class="product-card">
+<img src="Watermelon.jpg" alt="Watermelon">
+<h3>Watermelon</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+
+</div>
+<div class="product-card">
+<img src="Pineapple.webp" alt="Pineapple">
+<h3>Pineapple</h3>
+<a href="#" class="cart-btn">
+  <i class="fas fa-shopping-bag"></i> Add To Cart
+</a>
+</div>
+
+<style>
+  .product-container-box{
+    width: 300px;
+    border: 1px solid #eeeeee;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .product-container-box img{
+    width: 90%;
+    height: 180px;
+    object-fit: contain;
+    object-position: center;
+    margin: auto;
+  }
+  .cart-btn{
+    width: 80%;
+    height: 30px;
+    background-color: #ecf7ee;
+    color: #4eb060;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    transition: all ease 0.3s;
+  }
+  .cart-btn i{
+    margin-right: 10px;
+  }
+  .cart-btn:hover{
+    background-color: #4eb060;
+    color: #ffffff;
+    transition: all ease 0.3s;
+  }
+  .nav-icons{
+    display: flex;
+    align-items: center;
+  }
+  .nav-icons a{
+  display: inline-block;
+  font-size: 23px;
+  color: var(--text-color);
+  margin: 0 10px;
+  transition: all .6s ease;
+
+}
+  .nav-icons a:hover{
+  transform: scale(1.1);
+  color: var(--main-color);
+}
+#menu-icon{
+  font-size: 32px;
+  z-index: 10001;
+  cursor: pointer;
+  margin-left: 10px;
+  display: none;
+}
+
+</style>
+</div>
+</body>
+</html>

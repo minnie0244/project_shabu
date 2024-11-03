@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shabu buffrt</title>
+<link href="22.css" rel="stylesheet" type="text/css">
+</head>
+ 
+<body>
+<div class="container">
+<img src="0044.jpg" alt="Logo" class="logo">
+<h1>Shabu buffrt</h1>
+<nav>
+<a href="home.html">Home</a>
+<a href="about.html">Order</a>
+<a href="product.html">Buffetprice</a>
+<a href="contact.html">Contact</a>
+</nav>
+</div>
+</div>
+ 
+    <h1>Buffetprice</h1>
+<form id="buffetpriceForm">
+<input type="number" id="bufsfetpriceid" placeholder="buffetpriceid">
+<input type="number" id="priceoptions" placeholder="priceoptions">
+
+<button type="submit">Find items</button>
+</form>
+<table id="buffetpriceList">
+<tr>
+<th>buffetpriceid</th>
+<th>priceoptions</th>
+</tr>
+</table>
+ 
+    <br>
+ 
+    <h1>customer</h1>
+<form id="customerForm">
+<input type="number" id="customerid" placeholder="customerid">
+<input type="text" id="date" placeholder="date">
+<input type="number" id="nocadult" placeholder="nocadult">
+<input type="number" id="total_a" placeholder="total_a">
+<input type="number" id="nocchildren" placeholder="nocchildren">
+<input type="number" id="total_d" placeholder="total_d">
+<input type="number" id="buffetpriceid" placeholder="buffetpriceid">
+<input type="number" id="" placeholder="incomeid">
+<button type="submit">Find customer</button>
+</form>
+<table id="customerList">
+<tr>
+<th>nocadult</th>
+<th>total_a</th>
+<th>nocchildren</th>
+<th>total_d</th>
+<th>buffetpriceid</th>
+<th>incomeid</th>
+</tr>
+</table>
+ 
+    <br>
+ 
+    <h1>employee</h1>
+<form id="employeeForm">
+<input type="number" id="employeeid" placeholder="employeeid">
+<input type="text" id="FirstName" placeholder="firstName">
+<input type="text" id="LastName" placeholder="lastName">
+<input type="phone" id="phone" placeholder="phone">
+<input type="employeesalay" id="employeesalay" placeholder="employeesalay">
+<input type="expensesid" id="expensesid" placeholder="expensesid">
+<button type="submit">Find employee</button>
+</form>
+<table id="employeeList">
+<tr>
+<th>employeeid</th>
+<th>firstName</th>
+<th>lastName</th>
+<th>phone</th>
+<th>employeesalary</th>
+<th>expensesid</th>
+</tr>
+</table>
+ 
+    <br>
+ 
+    <h1>expenses</h1>
+<form id="expensesForm">
+<input type="number" id="expenses" placeholder="expenses">
+<input type="number" id="sumtotal_o" placeholder="sumtotal_o">
+<input type="number" id="sumtotal_e" placeholder="sumtotal_e">
+<button type="submit">Find expenses</button>
+</form>
+<table id="expensesList">
+<tr>
+<th>expenses</th>
+<th>sumtotal_o</th>
+<th>sumtotal_e</th>
+</tr>
+</table>
+ 
+    <br>
+ 
+    <h1>in_come</h1>
+<form id="in_comeForm">
+<input type="number" id="in_comeid" placeholder="in_comeid">
+<input type="number" id="sumtotal_c" placeholder="sumtotal_c">
+<button type="submit">Find</button>
+</form>
+<table id="in_comeList">
+<tr>
+<th>in_comeid</th>
+<th>sumtotal_c</th>
+</tr>
+</table>
+ 
+    <br>
+ 
+    <h1>order</h1>
+<form id="orderForm">
+<input type="number" id="orderid" placeholder="orderid">
+<input type="text" id="date" placeholder="date">
+<input type="number" id="rawmaterialid" placeholder="rawmaterialid">
+<input type="number" id="noo_kg" placeholder="noo_kg">
+<input type="number" id="total_o" placeholder="total_o">
+<input type="number" id="expensesid" placeholder="expensesid">
+<button type="submit">Find order</button>
+</form>
+<table id="orderList">
+<tr>
+<th>orderid</th>
+<th>date</th>
+<th>rawmaterialid</th>
+<th>noo_kg</th>
+<th>total_o</th>
+<th>expensesid</th>
+</tr>
+</table>
+ 
+    <br>
+ 
+    <h1>raw_material</h1>
+<form id="raw_materialForm">
+<input type="number" id="raw_materialid" placeholder="raw_materialid">
+<input type="text" id="name" placeholder="name">
+<input type="number" id="raw_materialprices_kg" placeholder="raw_materialprices_kg">
+<button type="submit">Find</button>
+</form>
+<table id="raw_materialList">
+<tr>
+<th>Traw_materialid</th>
+<th>name</th>
+<th>raw_materialprices_kg</th>
+</tr>
+</table>
+ 
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        fetch('/api/customers')
+            .then(response => response.json())
+            .then(data => {
+                const customerTable = document.getElementById('customerList');
+                data.data.forEach(customer => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${customer.nocadult}</td>
+                        <td>${customer.total_a}</td>
+                        <td>${customer.nocchildren}</td>
+                        <td>${customer.total_d}</td>
+                        <td>${customer.buffetpriceid}</td>
+                        <td>${customer.incomeid}</td>
+                    `;
+                    customerTable.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error fetching customer data:', error));
+    });
+</script>
+
+</body>
+ 
+</html>
+
+
+ 
